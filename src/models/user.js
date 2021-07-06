@@ -14,8 +14,7 @@ const userSchema = new mongoose.Schema({
     minlength: 5,
   },
   yearsInOrganization: {
-    type: String,
-    minlength: 3,
+    type: Number,
     required: true,
   },
   position: {

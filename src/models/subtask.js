@@ -12,9 +12,14 @@ const subtaskSchema = mongoose.Schema({
     ref: 'User',
     required: true,
   },
-  taskPointedTo: {
+  parentTask: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Task',
+    required: true,
+  },
+  userSubtaskPointedTo: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
   },
   done: {
     type: Boolean,
